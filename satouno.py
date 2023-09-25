@@ -60,12 +60,12 @@ class App:
                     if self.soundFlag == 0:
                         pyxel.play(0, 1)
                         self.soundFlag = 1
-                    if pyxel.btnp(pyxel.KEY_RIGHT):
+                    if pyxel.btnp(pyxel.KEY_RIGHT) or pyxel.btnp(pyxel.GAMEPAD1_BUTTON_DPAD_RIGHT):
                         self.next = 2
                         self.state = 2
                         self.soundFlag = 0
 
-                    if pyxel.btnp(pyxel.KEY_LEFT):
+                    if pyxel.btnp(pyxel.KEY_LEFT) or pyxel.btnp(pyxel.GAMEPAD1_BUTTON_DPAD_LEFT):
                         self.next = 0
                         self.state = 2
                         self.soundFlag = 0
